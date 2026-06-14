@@ -1,0 +1,371 @@
+.pinyon-script-regular {
+    font-family: "Pinyon Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    min-height:100vh;
+    background: linear-gradient(
+        to right,
+        #f0c8d4 50%,
+        #FFFFFF 50%
+    );
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+/* Styling whole site */
+ul {
+    list-style:none;
+}
+
+a{
+    text-decoration:none;
+}
+
+button{
+    cursor:pointer;
+    border:none;
+    background:none;
+}
+h3 {
+    color:white;
+}
+/* Navbar styling */
+/* .navbar .nav-menu .nav-link{
+    padding:8px 18px;
+    border-radius: 20px;
+    font: size 1px;
+    transition: 0.3s ease;
+    color:#F6EBDD
+}
+.navbar .nav-menu .nav-link:hover{
+    color:#3A1F1B;
+    background-color:#F6EBDD;
+} */
+
+header {
+    /* position:fixed; */
+    width:100%;
+    z-index:5;
+    background: #d95a6d;
+
+}
+.logo{
+    color:white;
+    font-size:25px;
+    letter-spacing:4px;
+}
+
+header .navbar{
+    display:flex;
+    padding: 20px;
+    align-items:center;
+    justify-content:space-between; 
+}
+
+.navbar .nav-menu{
+    display:flex;
+    gap:40px;
+}
+.navbar .nav-right{
+    display:flex;
+    gap:40px;
+}
+.navbar a {
+    color: #F5F1EB;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block; /* <-- important */
+}
+
+/* Hover effect */
+.navbar a:hover{
+    color:black;
+    transform:scale(1.1);
+}
+
+.hero-section{
+    min-height:100vh;
+    position:relative;
+    z-index:1;
+}
+
+.hero-section .section-content {
+    display: flex;
+    align-items:center;
+    min-height:100vh;
+    color:black;
+    justify-content:space-between;
+}
+.hero-section .hero-details{
+    padding: 20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+.hero-section .hero-details .title{
+    font-size: 45px;
+    color:#d95a6d;
+    font-family: "Pinyon Script", cursive;
+}
+.hero-section .hero-details .subtitle{
+    margin-top:8px;
+    max-width:70%;
+    font-size:x-large;
+    font-weight:bold;
+}
+.hero-section .hero-details .description{
+    max-width:70%;
+    margin:24px 0 40px;
+    font-size:medium;
+
+}
+.hero-section .hero-details .button{
+    padding:10px 26px;
+    border: 2px solid transparent;
+    color:#F5F1EB;
+    border-radius:20px;
+    background:#d95a6d;
+    font-weight:medium;
+
+}
+.hero-section .hero-details .button:hover{
+    color:black;
+    transform:scale(1.2);
+}
+.hero-section .hero-immage-wrapper{
+    max-width: 500px;
+    margin-right: 30px;
+
+}
+
+.footer{
+    padding: 10px;
+    background: linear-gradient(
+        to right,
+        #FFFFFF 50%,
+        #f0c8d4 50%
+    );
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    /* justify-content:; */
+    /* max-width:50%; */
+    margin:0 auto;
+    height: 200px;
+}
+
+.about-lasoye{
+    max-width:50%;
+    margin-right:70px;
+    color:#d95a6d;
+}
+
+.about-lasoye .collections{
+    color:white;
+}
+.about-lasoye h4{
+    font-family: "Pinyon Script", cursive;
+    font-size:25px;
+}
+
+.about-lasoye p{
+    font-size:small;
+    margin-top:10px;
+    color:#d95a6d;
+}
+
+.lasoye-collection p{
+    gap: 10px;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    color:#FFFFFF;
+}
+
+.lasoye-collection p:hover{
+    text-decoration: underline;
+}
+.lasoye-collection {
+    gap: 10px;
+    display:flex;
+    margin:auto;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    color:white;
+}
+.lasoye-collection p a{
+    color:white;
+}
+
+.collections{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+.collections ul{
+    list-style: disc;
+    padding-left: 20px;
+    color:#FFFFFF;
+}
+
+.carousel::-webkit-scrollbar{
+    display:none;
+}
+
+.carousel-item{
+    flex: 0 0 5em;
+    height:500px;
+    padding:1em;
+    font-size:3rem;
+    border-radius: .2em;
+    text-align:center;
+    align-content:center;
+}
+
+.carousel{
+    overflow:hidden;
+    width:100%;
+    margin:100px auto;
+}
+
+.track{
+    display:flex;
+    width:max-content;
+    animation:scroll 20s linear infinite;
+}
+
+.group{
+    display:flex;
+    gap:1rem;
+}
+
+@keyframes scroll{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+/* Container */
+#form{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:35px;
+}
+
+/* Form card */
+#contact{
+    background-color: #ffffff;
+    padding: 60px;
+    width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Heading */
+#contact h2{
+    text-align: center;
+    color: #d95a6d;
+    font-family: "Pinyon Script", cursive;
+    font-size: 2.5rem;
+}
+
+
+/* Contact page */
+/* Inputs */
+#contact input,
+#contact textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+/* Textarea */
+#contact textarea{
+    resize: none;
+    height: 120px;
+}
+
+/* Button */
+#contact button{
+    background-color: #d95a6d;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+#contact button:hover{
+    background-color: #b84456;
+}
+
+
+.backbutton:hover{
+    background-color: #b84456;
+}
+.backbutton a{
+    color: white;
+}
+
+.wrapper{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 100%;
+    padding: 12px;
+    /* border: 1px solid #ddd; */
+    /* border-radius: 8px; */
+    font-size: 1rem;
+    margin-top:48px;
+}
+
+.wrapper h3{
+    text-align: center;
+    color: black;
+    font-family: "Pinyon Script", cursive;
+    font-size: 15px;
+}
+
+.wrapper a{
+    color:#d95a6d;
+}
+.wrapper a:hover{
+    color: #943745;
+}
+#contact button{
+    background-color: #d95a6d;
+    padding: 8px;
+    border-radius: 8px;
+    margin:20px 20px;
+    font-size: 1.1rem;
+    width:300px;
+    margin:10px 50px;
+}
+
