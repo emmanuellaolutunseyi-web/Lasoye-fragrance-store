@@ -57,6 +57,7 @@ header .navbar{
     border-bottom-left-radius: 4px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
+    background-color:white;
 }
 .search{
     max-width:850px;
@@ -68,7 +69,7 @@ header .navbar{
 
 .search-button{
     background-color:#f0c8d4;
-    border:none;
+    border:none #d95a6d;
     width:45px;
     height:38px;
     border-top-right-radius: 4px;
@@ -111,7 +112,6 @@ h3 {
 
 .orders-grid {
   display: grid;
-  grid-template-columns: 1fr;
   row-gap: 50px;
 }
 
@@ -120,13 +120,13 @@ h3 {
   flex-shrink: 0;
 }
 
-.total{
+/* .total{
   margin-left:150px;
-}
+} */
 
-.product-details{
+/* .product-details{
   margin-left:100px;
-}
+} */
 
 .order-header-label{
   font-weight:600;
@@ -141,20 +141,18 @@ h3 {
 
 
 .orders-header{
-  background-color:#f0c8d4;
-  border: 1px solid #d95a6d;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding: 20px 25px;
-  border-top-left-radius:7px;
-  border-top-right-radius:7px;
-  max-width:1000px;
+  padding: 20px 50px;
 }
 
-.order-placed{
-  margin-left:20px;
+.order-container{
+  display:grid;
+  grid-column:1px;
+  border:1px solid #d95a6d;
 }
+
+/* .order-placed{
+  margin-left:20px;
+} */
 .order-details-grid{
   max-width:1000px;
   display:flex;
@@ -163,9 +161,7 @@ h3 {
 
 }
 
-.product-image-container{
-  margin-top:40px;
-}
+
 .product-image-container img{
   max-width: 150px;
   max-height: 150px;
@@ -175,7 +171,6 @@ h3 {
   padding: 20px 25px;
   border-bottom-left-radius:7px;
   border-bottom-right-radius:7px;
-  border: 1px solid #d95a6d;
   max-width:1000px;
 }
 
@@ -183,9 +178,6 @@ h3 {
   font-weight:600;
 }
 
-.product-details{
-  flex:1;
-}
 .product-actions{
   flex:1;
   padding-left: 200px;
@@ -211,6 +203,7 @@ h3 {
   padding:10px;
   max-width:150px;
   text-align:center;
+
 }
 
 .product-actions:hover{
@@ -221,3 +214,97 @@ h3 {
 /* .track-package-button:hover{
   color:white;
 } */
+@media screen and (max-width: 768px) {
+    .order-details-grid{
+      flex-direction:column;
+      justify-content:center;
+      align-items:start;
+    }
+    .product-actions{
+      margin-top:16px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    /* 1. Unshackle the Header Layout */
+    header .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 10px;
+    }
+
+    .navbar .nav-menu, 
+    .navbar .nav-right {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .search {
+        max-width: 100%;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* 2. Reset Aggressive Base Page Margins & Padding */
+    .main-body {
+        margin-top: 30px;
+        margin-bottom: 50px;
+        margin-left: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    /* 3. Rebuild the Order Meta Headers */
+    .order-container {
+        width: 100%;
+    }
+
+    .orders-header {
+        padding: 15px;
+        background-color: #fcf8f9; /* Subtle tint for structural clarity */
+    }
+
+    .order-heading {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    /* 4. Smooth out Item and Actions Grid Layouts */
+    .order-details-grid {
+        flex-direction: column;
+        align-items: center;  /* Centers images and descriptions cleanly */
+        text-align: center;
+        gap: 20px;
+        padding: 20px 15px;
+        max-width: 100%;
+    }
+
+    .products {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .product-image-container img {
+        max-width: 120px; /* Gently scales down images for small panels */
+        max-height: 120px;
+    }
+
+    /* 5. Re-align Action Buttons (Track & Buy Again) */
+    .product-actions {
+        flex: none;          /* Removes rigid flex behavior */
+        width: 100%;         /* Stretches buttons to full column width */
+        max-width: 250px;    /* Prevents button from looking too stretched out */
+        margin-right: 0;     /* Drops uneven desktop alignment */
+        margin-top: 15px;
+        padding: 12px;       /* Adds comfortable tapping space for phone screens */
+    }
+}

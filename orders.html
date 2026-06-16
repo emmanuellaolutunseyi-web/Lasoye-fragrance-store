@@ -9,6 +9,10 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
   />
   <link rel="stylesheet" href="styles/orders.css">
+  <!-- <link href="/src/style.css" rel="stylesheet"> -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4">
+
+  </script>
 </head>
 <body>
   <header>
@@ -33,26 +37,26 @@
   </header>
   <div class="main-body">
     <div class="title">Your Orders</div>
-    <div class="orders-grid">
-      <div class="order-container">
-        <div class="orders-header">
-          <div class="order-heading">
-            <div class="order-placed">
-              <div class="order-header-label">Order Placed:</div>
-              <div class="date">August 12</div>
-            </div>
-            <div class="total">
-              <div class="order-header-label">Total:</div>
-              <div class="price">£35.99</div>
-            </div>
+    <div class="orders-grid grid">
+      <div class="order-container rounded-md">
+        <div class="orders-header grid md:grid-cols-3 bg-[#f0c8d4] py-12 px-4 gap-6 rounded-t-md">
+          
+          <div class="order-placed flex flex-col justify-between">
+            <p class="order-header-label">Order Placed:</p>
+            <p class="date">August 12<p>
           </div>
-          <div class="order-id">
+          <div class="total flex flex-col justify-between">
+            <div class="order-header-label">Total:</div>
+            <div class="price">£35.99</div>
+          </div>
+          
+          <div class="order-id flex flex-col justify-between">
             <div class="order-header-label">Order ID:</div>
             <div class="id">52fga69d-9c3d-4078-b42f-zc7ha62b7990</div>
           </div>
         </div>
         <div class="products">
-          <div class="order-details-grid">
+          <div class="order-details-grid grid md:grid-cols-3 grid-cols-1 ">
             <div class="product-image-container">
               <img src="Pink-perfume.png">
             </div>
@@ -79,7 +83,7 @@
               </a>
             </div>
           </div>
-          <div class="order-details-grid">
+          <div class="order-details-grid grid md:grid-cols-3 grid-cols-1">
             <div class="product-image-container">
               <img src="lasoye-gold.png">
             </div>
@@ -108,19 +112,17 @@
           </div>
         </div>
       </div>
-      <div class="order-container">
-        <div class="orders-header">
-          <div class="order-heading">
-            <div class="order-placed">
-              <div class="order-header-label">Order Placed:</div>
+      <div class="order-container rounded-md">
+        <div class="orders-header grid md:grid-cols-3 bg-[#f0c8d4] py-12 px-4 gap-6 rounded-t-md">
+            <div class="order-placed flex flex-col justify-between">
+              <div class="order-header-label ">Order Placed:</div>
               <div class="date">June 10</div>
             </div>
-            <div class="total">
+            <div class="total flex flex-col justify-between">
               <div class="order-header-label">Total:</div>
               <div class="price">£40.99</div>
             </div>
-          </div>
-          <div class="order-header-right-section">
+          <div class="order-header-right-section flex flex-col justify-between">
               <div class="order-header-label">Order ID:</div>
               <div>b6b6c212-d30e-4d4a-805d-90b52ce6b37d</div>
           </div>

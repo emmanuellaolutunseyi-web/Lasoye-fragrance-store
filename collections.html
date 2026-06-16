@@ -11,10 +11,11 @@
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
   />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
     <!-- Navbar code -->
-    <header>
+    <header >
         <nav class="navbar">
             <ul class="nav-menu">
                 <li>
@@ -22,7 +23,7 @@
                 </li>
             </ul>
             <div class="search">
-                <input placeholder="Search..." type="text" class="search-bar">
+                <input placeholder="Search..." type="text" class="search-bar bg-white">
                 <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>                
             </div>
             <!-- <h1 class="logo">LASOYE</h1> -->
@@ -30,7 +31,10 @@
             <ul class="nav-right">
                 <li><a href="account.html">Account</a></li>
                 <li><a href="orders.html">Returns and orders</a></li>
-                <li><i class="fa-solid fa-cart-arrow-down cart"></i></li>
+                <li >
+                    <span class="cart-count text-white">0</span>
+                    <i class="fa-solid fa-cart-arrow-down cart text-white"></i>
+                </li>
             </ul>
         </nav>
     </header>
@@ -41,19 +45,24 @@
             <div class="product-container">
                 <div class="product-image-container">
                     <img class="product-image" src="lasoye-gold.png">
+                    <img class="product-image2" src="Gold-perfume-with-package.png">
                 </div>
                 <div class="product-name">
                     Lasoye Summer Classic 1
                 </div>
                 <div class="product-price">
-                    £25
+                    £24.99
                 </div>
                 <div>
-                    <select class="product-size">
+                    <select class="product-size border border-black-500 bg-white">
                         <option selected value="30ml">30ml</option>
                         <option value="50ml">50ml</option>
                         <option value="100ml">100ml</option>
                     </select>
+                </div>
+                <div class="added-to-cart">
+                    <i class="fa-solid fa-square-check"></i>
+                    Added
                 </div>
                 <div>
                     <button class="add-to-cart-button">
@@ -64,19 +73,24 @@
             <div class="product-container2">
                 <div class="product-image-container">
                     <img class="product-image" src="Pink-perfume.png">
+                    <img class="product-image2" src="Pink-perfume-with-package.png">
                 </div>
                 <div class="product-name">
                     Lasoye Summer Classic 2
                 </div>
                 <div class="product-price">
-                    £25
+                    £24.99
                 </div>
                 <div>
-                    <select class="product-size">
+                    <select class="product-size border border-black-500 bg-white">
                         <option selected value="30ml">30ml</option>
                         <option value="50ml">50ml</option>
                         <option value="100ml">100ml</option>
                     </select>
+                </div>
+                <div class="added-to-cart">
+                    <i class="fa-solid fa-square-check"></i>
+                    Added
                 </div>
                 <div>
                     <button class="add-to-cart-button">
@@ -87,19 +101,24 @@
             <div class="product-container">
                 <div class="product-image-container">
                     <img class="product-image" src="lasoye-gold.png">
+                    <img class="product-image2" src="Gold-perfume-with-package.png">
                 </div>
                 <div class="product-name">
                     Lasoye Summer Classic 3
                 </div>
                 <div class="product-price">
-                    £25
+                    £24.99
                 </div>
                 <div>
-                    <select class="product-size">
+                    <select class="product-size border border-black-500 bg-white">
                         <option selected value="30ml">30ml</option>
                         <option value="50ml">50ml</option>
                         <option value="100ml">100ml</option>
                     </select>
+                </div>
+                <div class="added-to-cart">
+                    <i class="fa-solid fa-square-check"></i>
+                    Added
                 </div>
                 <div>
                     <button class="add-to-cart-button">
@@ -112,19 +131,24 @@
             <div class="product-container2">
                 <div class="product-image-container">
                     <img class="product-image" src="Pink-perfume.png">
+                    <img class="product-image2" src="Pink-perfume-with-package.png">
                 </div>
                 <div class="product-name">
                     Lasoye Autumn Classic 1
                 </div>
                 <div class="product-price">
-                    £25
+                    £24.99
                 </div>
                 <div>
-                    <select class="product-size">
+                    <select class="product-size border border-black-500 bg-white">
                         <option selected value="30ml">30ml</option>
                         <option value="50ml">50ml</option>
                         <option value="100ml">100ml</option>
                     </select>
+                </div>
+                <div class="added-to-cart">
+                    <i class="fa-solid fa-square-check"></i>
+                    Added
                 </div>
                 <div>
                     <button class="add-to-cart-button">
@@ -135,19 +159,24 @@
             <div class="product-container">
                 <div class="product-image-container">
                     <img class="product-image" src="lasoye-gold.png">
+                    <img class="product-image2" src="Gold-perfume-with-package.png">
                 </div>
                 <div class="product-name">
                     Lasoye Autumn Classic 2
                 </div>
                 <div class="product-price">
-                    £25
+                    £24.99
                 </div>
                 <div>
-                    <select class="product-size">
+                    <select class="product-size border border-black-500 bg-white">
                         <option selected value="30ml">30ml</option>
                         <option value="50ml">50ml</option>
                         <option value="100ml">100ml</option>
                     </select>
+                </div>
+                <div class="added-to-cart">
+                    <i class="fa-solid fa-square-check"></i>
+                    Added
                 </div>
                 <div>
                     <button class="add-to-cart-button">
@@ -158,19 +187,24 @@
             <div class="product-container2">
                 <div class="product-image-container">
                     <img class="product-image" src="Pink-perfume.png">
+                    <img class="product-image2" src="Pink-perfume-with-package.png">
                 </div>
                 <div class="product-name">
                     Lasoye Autumn Classic 3
                 </div>
                 <div class="product-price">
-                    £25
+                    £24.99
                 </div>
                 <div>
-                    <select class="product-size">
+                    <select class="product-size border border-black-500 bg-white">
                         <option selected value="30ml">30ml</option>
                         <option value="50ml">50ml</option>
                         <option value="100ml">100ml</option>
                     </select>
+                </div>
+                <div class="added-to-cart">
+                    <i class="fa-solid fa-square-check"></i>
+                    Added
                 </div>
                 <div>
                     <button class="add-to-cart-button">
@@ -183,19 +217,24 @@
             <div class="product-container">
                 <div class="product-image-container">
                     <img class="product-image" src="lasoye-gold.png">
+                    <img class="product-image2" src="Gold-perfume-with-package.png">
                 </div>
                 <div class="product-name">
                     Lasoye Winter Classic 1
                 </div>
                 <div class="product-price">
-                    £25
+                    £24.99
                 </div>
                 <div>
-                    <select class="product-size">
+                    <select class="product-size border border-black-500 bg-white">
                         <option selected value="30ml">30ml</option>
                         <option value="50ml">50ml</option>
                         <option value="100ml">100ml</option>
                     </select>
+                </div>
+                <div class="added-to-cart">
+                    <i class="fa-solid fa-square-check"></i>
+                    Added
                 </div>
                 <div>
                     <button class="add-to-cart-button">
@@ -206,19 +245,24 @@
             <div class="product-container2">
                 <div class="product-image-container">
                     <img class="product-image" src="Pink-perfume.png">
+                    <img class="product-image2" src="Pink-perfume-with-package.png">
                 </div>
                 <div class="product-name">
                     Lasoye Winter Classic 2
                 </div>
                 <div class="product-price">
-                    £25
+                    £24.99
                 </div>
                 <div>
-                    <select class="product-size">
+                    <select class="product-size border border-black-500 bg-white">
                         <option selected value="30ml">30ml</option>
                         <option value="50ml">50ml</option>
                         <option value="100ml">100ml</option>
                     </select>
+                </div>
+                <div class="added-to-cart">
+                    <i class="fa-solid fa-square-check"></i>
+                    Added
                 </div>
                 <div>
                     <button class="add-to-cart-button">
@@ -229,19 +273,24 @@
             <div class="product-container">
                 <div class="product-image-container">
                     <img class="product-image" src="lasoye-gold.png">
+                    <img class="product-image2" src="Gold-perfume-with-package.png">
                 </div>
                 <div class="product-name">
                     Lasoye Winter Classic 3
                 </div>
                 <div class="product-price">
-                    £25
+                    £24.99
                 </div>
                 <div>
-                    <select class="product-size">
+                    <select class="product-size border border-black-500 bg-white">
                         <option selected value="30ml">30ml</option>
                         <option value="50ml">50ml</option>
                         <option value="100ml">100ml</option>
                     </select>
+                </div>
+                <div class="added-to-cart">
+                    <i class="fa-solid fa-square-check"></i>
+                    Added
                 </div>
                 <div>
                     <button class="add-to-cart-button">
@@ -254,19 +303,24 @@
             <div class="product-container2">
                 <div class="product-image-container">
                     <img class="product-image" src="Pink-perfume.png">
+                    <img class="product-image2" src="Pink-perfume-with-package.png">
                 </div>
                 <div class="product-name">
                     Lasoye Spring Classic 1
                 </div>
                 <div class="product-price">
-                    £25
+                    £24.99
                 </div>
                 <div>
-                    <select class="product-size">
+                    <select class="product-size border border-black-500 bg-white">
                         <option selected value="30ml">30ml</option>
                         <option value="50ml">50ml</option>
                         <option value="100ml">100ml</option>
                     </select>
+                </div>
+                <div class="added-to-cart">
+                    <i class="fa-solid fa-square-check"></i>
+                    Added
                 </div>
                 <div>
                     <button class="add-to-cart-button">
@@ -277,19 +331,24 @@
             <div class="product-container">
                 <div class="product-image-container">
                     <img class="product-image" src="lasoye-gold.png">
+                    <img class="product-image2" src="Gold-perfume-with-package.png">
                 </div>
                 <div class="product-name">
                     Lasoye Spring Classic 2
                 </div>
                 <div class="product-price">
-                    £25
+                    £24.99
                 </div>
                 <div>
-                    <select class="product-size">
+                    <select class="product-size border border-black-500 bg-white">
                         <option selected value="30ml">30ml</option>
                         <option value="50ml">50ml</option>
                         <option value="100ml">100ml</option>
                     </select>
+                </div>
+                <div class="added-to-cart">
+                    <i class="fa-solid fa-square-check"></i>
+                    Added
                 </div>
                 <div>
                     <button class="add-to-cart-button">
@@ -300,19 +359,24 @@
             <div class="product-container2">
                 <div class="product-image-container">
                     <img class="product-image" src="Pink-perfume.png">
+                    <img class="product-image2" src="Pink-perfume-with-package.png">
                 </div>
                 <div class="product-name">
                     Lasoye Spring Classic 3
                 </div>
                 <div class="product-price">
-                    £25
+                    £24.99
                 </div>
                 <div>
-                    <select class="product-size">
+                    <select class="product-size border border-black-500 bg-white">
                         <option selected value="30ml">30ml</option>
                         <option value="50ml">50ml</option>
                         <option value="100ml">100ml</option>
                     </select>
+                </div>
+                <div class="added-to-cart">
+                    <i class="fa-solid fa-square-check"></i>
+                    Added
                 </div>
                 <div>
                     <button class="add-to-cart-button">
@@ -323,5 +387,6 @@
         </div>
     </div>
 
+    <script src="scripts/collections.js"></script>
 </body>
 </html>

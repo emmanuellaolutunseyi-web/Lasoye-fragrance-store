@@ -37,7 +37,7 @@ h3 {
 header {
     /* position:fixed; */
     width:100%;
-    z-index:5;
+    /* z-index:5; */
     background: #d95a6d;
     margin-bottom: 48px !important;
 }
@@ -145,6 +145,7 @@ header .navbar{
     border-bottom: 1px solid;
     border-left: 1px solid; */
     display: flex;
+    flex-wrap:wrap;
     flex-direction:column;
     background-color:#f0c8d4;
     border: 1px solid;
@@ -161,6 +162,7 @@ header .navbar{
     border-bottom: 1px solid;
     border-left: 1px solid; */
     display: flex;
+    flex-wrap:wrap;
     flex-direction:column;
     background-color:white;
     border: 1px solid;
@@ -180,11 +182,29 @@ header .navbar{
     align-items:center;
     height:180px;
     margin-bottom:20px;
+    position:relative;
 }
 
 .product-image{
     max-width: 100%;
     max-height: 100%;
+    position:absolute;
+    transition: 0.3s ease;
+}
+
+.product-image-container:hover .product-image{
+    opacity:0;
+    cursor:pointer;
+}
+.product-image2{
+    max-width: 100%;
+    max-height: 100%;
+    opacity:0;
+}
+
+.product-image-container:hover .product-image2{
+    opacity:1;
+    cursor:pointer;
 }
 .product-name {
   height: 40px;
@@ -203,4 +223,71 @@ header .navbar{
     padding: 10px;
     border-radius: 7px;
     color:black;
+}
+
+/* Added text display */
+.added-to-cart{
+  color:#b84456;
+  margin-left:90px;
+  /* Javascript will be used to change opacity when button is clicked */
+  opacity:0;
+}
+
+@media (max-width: 768px) {
+    /* 1. Reset Main Navigation Layout */
+    header .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 10px;
+    }
+
+    .navbar .nav-menu, 
+    .navbar .nav-right {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* 2. Fix the Search Bar Layout */
+    .search {
+        max-width: 100%;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* 3. Reconfigure Page & Card Layouts */
+    .season {
+        display: grid;
+        /* Dictates single-column cards on small viewports so they never pack or crush */
+        grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
+        padding-left: 15px;
+        padding-right: 15px;
+        gap: 20px;
+    }
+
+    .product-container, 
+    .product-container2 {
+        margin-right: 0; /* Drops the right margin to stay horizontally centered */
+        margin-bottom: 20px;
+        padding: 40px 20px 20px 20px; /* Reduced top padding from 100px so content fits beautifully */
+        width: 100%;
+    }
+
+    /* 4. Stabilize Product Information Layouts */
+    .product-image-container {
+        height: 150px; /* Scales down image container to match screen space */
+        margin-bottom: 15px;
+    }
+
+    .product-name {
+        height: auto; /* Lets text titles wrap onto secondary lines cleanly */
+        margin-bottom: 8px;
+    }
+
+    .added-to-cart {
+        margin-left: 0; /* Drops left margins so the banner centers underneath buttons */
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
 }
