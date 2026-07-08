@@ -40,6 +40,7 @@ header {
     /* z-index:5; */
     background: #d95a6d;
     margin-bottom: 48px !important;
+    height:75px;
 }
 .logo{
     color:white;
@@ -57,6 +58,7 @@ header .navbar{
 .navbar .nav-menu{
     display:flex;
     gap:40px;
+    margin-top:8px;
 }
 .navbar .nav-right{
     display:flex;
@@ -64,7 +66,7 @@ header .navbar{
 }
 .navbar a {
     color: #F5F1EB;
-    font-size: 14px;
+    font-size: 18px;
     letter-spacing: 1px;
     transition: transform 0.3s ease, color 0.3s ease;
     display: inline-block; /* <-- important */
@@ -87,7 +89,7 @@ header .navbar{
     border:none;
     width:0;
     font-size:16px;
-    height:38px;
+    height:43px;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
     border-top-right-radius: 0px;
@@ -105,7 +107,7 @@ header .navbar{
     background-color:#f0c8d4;
     border:none;
     width:45px;
-    height:38px;
+    height:43px;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
     border-top-left-radius: 0px;
@@ -172,7 +174,12 @@ header .navbar{
 }
 
 .products-grid{
-    
+    display:grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
     border-top:90px;
     /* padding-top: 68px; */
 }
@@ -180,7 +187,8 @@ header .navbar{
     display:flex;
     justify-content:center;
     align-items:center;
-    height:180px;
+    height:280px;
+    width:100%;
     margin-bottom:20px;
     position:relative;
 }
@@ -188,6 +196,7 @@ header .navbar{
 .product-image{
     max-width: 100%;
     max-height: 100%;
+    object-contain: contain;
     position:absolute;
     transition: 0.3s ease;
 }
@@ -199,6 +208,9 @@ header .navbar{
 .product-image2{
     max-width: 100%;
     max-height: 100%;
+    object-contain: contain;
+    position: absolute;
+    transition: opacity 0.3s ease;
     opacity:0;
 }
 
