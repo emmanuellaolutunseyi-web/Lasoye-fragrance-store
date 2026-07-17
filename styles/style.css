@@ -5,7 +5,11 @@
 }
 html{
     scroll-behavior:smooth;
+    scrollbar-width:auto;
+    scrollbar-color: #f0c8d4 white;
+    
 }
+
 body{
     min-height:100vh;
     background: linear-gradient(
@@ -117,7 +121,6 @@ header .navbar{
     max-width:70%;
     font-size:40px;
     font-weight:bold;
-    white-space:nowrap;
 }
 .hero-section .hero-details .description{
     max-width:70%;
@@ -159,7 +162,7 @@ header .navbar{
     /* justify-content:; */
     /* max-width:50%; */
     margin:0 auto;
-    height: 220px;
+    height: 200px;
 }
 
 .about-lasoye{
@@ -278,7 +281,8 @@ header .navbar{
 #contact{
     background-color: #ffffff;
     padding: 60px;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     display: flex;
@@ -378,6 +382,16 @@ header .navbar{
 #home{
     display:none;
 }
+
+@media (max-width:110p0x){
+    .hero-section .section-content{
+        min-height:70vh
+    }
+    .hero-image{
+        width:45%;
+        max-width:450px;
+    }
+}
 @media (max-width:768px){
     body{
         background: linear-gradient(
@@ -389,40 +403,56 @@ header .navbar{
         flex-direction: column;
         text-align: center;
     }
+    header{
+        height:135px;
+    }
+    
+    header .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 10px;
+    }
+    .navbar .nav-menu, 
+    .navbar .nav-right {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     .hero-section .section-content {
         flex-direction: column;
         text-align: center;
         justify-content: center;
-        gap: 30px; /* Adds clear separation between text and image */
-        min-height: auto; /* Lets content scale tall naturally without clipping */
-        padding: 40px 0;
+        gap: 30px; 
+        min-height: auto; 
+        padding: 20px 0;
     } 
     .hero-section .hero-details .subtitle,
     .hero-section .hero-details .description {
-        max-width: 90%; /* Bumped up from 70% to stop aggressive vertical squishing */
+        max-width: 80%; 
     }
 
-    /* .hero-section .hero-image-wrapper {
-        width: 1200px;
-        height:700px;
-        margin-right:100px;
-        border:solid;
-    } */
+    .hero-image-wrapper img{
+        width: 100%;
+        height:auto;
+        max-width:550px;
+    }
 
     .main-body {
-        padding-top: 20px; /* Reduced from 90px so elements aren't pushed down too far */
-    }
-    
-    .navbar {
-        position: relative;
-        justify-content: center;
-        flex-direction: column; /* Stacks navigation items comfortably if they overflow */
-        gap: 15px;
+        padding-top: 20px; 
     }
 
     .logo {
         font-size: 20px;
         display: flex;
-        order: -1; /* Keeps logo at the top when navbar collapses vertically */
-    }     
+        order: -1; 
+    }    
+    .order-details-grid{
+      flex-direction:column;
+      justify-content:center;
+      align-items:start;
+    }
+    .product-actions{
+      margin-top:16px;
+    }
+ 
 }

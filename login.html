@@ -33,13 +33,22 @@
         </nav>
     </header>
   <div class="wrapper">
-      <form id="contact" action="#" class="contact">
+      <form id="contact" action="/login" class="contact" method="POST">
         <h2 class="registration">Login</h2>
         <div class="input-box">
-          <input type="text" placeholder="Enter username" required/>
+          <!-- {% with messages = get_flashed_messages() %}
+            {% if messages %}
+              <div class="flash-messages" style="color: #d95a6d; margin-bottom: 15px; font-weight: bold;">
+                {% for message in messages %}
+                  <p>{{ message }}</p>
+                {% endfor %}
+              </div>
+            {% endif %}
+          {% endwith %} -->
+          <input type="text" placeholder="Enter username" name="username" required/>
         </div>
         <div class="input-box">
-          <input type="text" placeholder="Enter your password" required/>
+          <input type="text" placeholder="Enter your password" name="password"required/>
         </div>
         <div class="policy">
           <input type="checkbox">

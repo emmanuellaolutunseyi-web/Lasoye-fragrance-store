@@ -4,6 +4,12 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
+html{
+    scroll-behavior:smooth;
+    scrollbar-width:auto;
+    scrollbar-color: #f0c8d4 white;
+}
 header {
     /* position:fixed; */
     width:100%;
@@ -132,12 +138,7 @@ h3 {
   font-weight:600;
 }
 
-.order-details-grid{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding: 20px 25px;
-}
+
 
 
 .orders-header{
@@ -150,20 +151,14 @@ h3 {
   border:1px solid #d95a6d;
 }
 
-/* .order-placed{
-  margin-left:20px;
-} */
-.order-details-grid{
-  max-width:1000px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
 
+.order-details-grid{
+  padding: 20px 25px;
 }
 
 
 .product-image-container img{
-  max-width: 150px;
+  max-width: 120px;
   max-height: 150px;
 }
 
@@ -171,7 +166,6 @@ h3 {
   padding: 20px 25px;
   border-bottom-left-radius:7px;
   border-bottom-right-radius:7px;
-  max-width:1000px;
 }
 
 .product-name{
@@ -180,8 +174,6 @@ h3 {
 
 .product-actions{
   flex:1;
-  padding-left: 200px;
-  margin-right:70px;
 }
 
 
@@ -190,6 +182,7 @@ h3 {
   padding:10px;
   margin-top:10px;
   border-radius:10px;
+  max-width:200px;
 }
 
 .buy-again-button:hover{
@@ -200,10 +193,10 @@ h3 {
 .product-actions{
   border: 1px solid #d95a6d;
   border-radius:10px;
-  padding:10px;
+  padding:10px 20px;
   max-width:150px;
   text-align:center;
-
+  height:45px;
 }
 
 .product-actions:hover{
@@ -211,23 +204,9 @@ h3 {
   cursor:pointer;
 }
 
-/* .track-package-button:hover{
-  color:white;
-} */
-@media screen and (max-width: 768px) {
-    .order-details-grid{
-      flex-direction:column;
-      justify-content:center;
-      align-items:start;
-    }
-    .product-actions{
-      margin-top:16px;
-    }
-}
-
 
 @media screen and (max-width: 768px) {
-    /* 1. Unshackle the Header Layout */
+
     header .navbar {
         flex-direction: column;
         gap: 15px;
@@ -247,7 +226,7 @@ h3 {
         margin: 10px 0;
     }
 
-    /* 2. Reset Aggressive Base Page Margins & Padding */
+
     .main-body {
         margin-top: 30px;
         margin-bottom: 50px;
@@ -269,7 +248,7 @@ h3 {
 
     .orders-header {
         padding: 15px;
-        background-color: #fcf8f9; /* Subtle tint for structural clarity */
+        background-color: #fcf8f9; 
     }
 
     .order-heading {
@@ -281,7 +260,7 @@ h3 {
     /* 4. Smooth out Item and Actions Grid Layouts */
     .order-details-grid {
         flex-direction: column;
-        align-items: center;  /* Centers images and descriptions cleanly */
+        align-items: center; 
         text-align: center;
         gap: 20px;
         padding: 20px 15px;
@@ -294,17 +273,17 @@ h3 {
     }
 
     .product-image-container img {
-        max-width: 120px; /* Gently scales down images for small panels */
+        max-width: 120px; 
         max-height: 120px;
     }
 
     /* 5. Re-align Action Buttons (Track & Buy Again) */
     .product-actions {
-        flex: none;          /* Removes rigid flex behavior */
-        width: 100%;         /* Stretches buttons to full column width */
-        max-width: 250px;    /* Prevents button from looking too stretched out */
-        margin-right: 0;     /* Drops uneven desktop alignment */
+        flex: none;          
+        width: 100%;         
+        max-width: 250px;    
+        margin-right: 0;     
         margin-top: 15px;
-        padding: 12px;       /* Adds comfortable tapping space for phone screens */
+        padding: 12px;       
     }
 }

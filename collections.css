@@ -7,6 +7,11 @@ body{
     min-height:100vh;
     background: white;
 }
+html{
+    scroll-behavior:smooth;
+    scrollbar-width:auto;
+    scrollbar-color: #f0c8d4 white;
+}
 
 * {
     margin: 0;
