@@ -252,12 +252,15 @@ header .navbar{
 
 @media (max-width: 768px) {
     /* 1. Reset Main Navigation Layout */
+    header {
+    height: auto; /* Lets the navigation rows flow and wrap naturally */
+    }
+
     header .navbar {
         flex-direction: column;
         gap: 15px;
         padding: 15px 10px;
     }
-
     .navbar .nav-menu, 
     .navbar .nav-right {
         gap: 20px;
@@ -265,12 +268,13 @@ header .navbar{
         justify-content: center;
     }
 
-    /* 2. Fix the Search Bar Layout */
     .search {
         max-width: 100%;
         width: 100%;
         margin: 10px 0;
     }
+
+    
 
     /* 3. Reconfigure Page & Card Layouts */
     .season {
@@ -290,15 +294,20 @@ header .navbar{
         width: 100%;
     }
 
-    /* 4. Stabilize Product Information Layouts */
+    
     .product-image-container {
-        height: 150px; /* Scales down image container to match screen space */
+        height: 250px; 
         margin-bottom: 15px;
     }
 
     .product-name {
         height: auto; /* Lets text titles wrap onto secondary lines cleanly */
         margin-bottom: 8px;
+    }
+    .products-grid {
+    grid-template-columns: 1fr; /* Instantly forces exactly 1 product card per row */
+    padding: 15px;
+    gap: 25px;
     }
 
     .added-to-cart {
