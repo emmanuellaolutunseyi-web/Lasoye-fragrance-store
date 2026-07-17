@@ -366,12 +366,11 @@ header .navbar{
 }
 #contact button{
     background-color: #d95a6d;
-    padding: 8px;
+    padding: 7px;
     border-radius: 8px;
-    margin:20px 20px;
+    margin:20px;
     font-size: 1.1rem;
     width:300px;
-    margin:10px 50px;
 }
 #hamburger{
     display:none;
