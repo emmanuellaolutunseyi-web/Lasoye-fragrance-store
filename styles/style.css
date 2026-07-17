@@ -114,7 +114,7 @@ header .navbar{
     font-size: 75px;
     color:#d95a6d;
     font-family: "Pinyon Script", cursive;
-    margin-left:75px;
+    margin-left: 30px;
 }
 .hero-section .hero-details .subtitle{
     margin-top:8px;
@@ -149,27 +149,24 @@ header .navbar{
 }
 
 
-.footer{
-    padding: 10px;
-    background: linear-gradient(
-        to right,
-        #FFFFFF 50%,
-        #f0c8d4 50%
-    );
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    /* justify-content:; */
-    /* max-width:50%; */
-    margin:0 auto;
-    height: 200px;
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; 
+    padding: 40px 0; 
+    height: auto; 
+    background: linear-gradient(to right, #ffffff 50%, #f0c8d4 50%);
 }
 
-.about-lasoye{
-    max-width:50%;
-    margin-right:70px;
-    color:#d95a6d;
+
+.about-lasoye {
+    width: 50%;
+    flex: 0 0 50%;
+    padding: 0 40px; 
+    color: #d95a6d;
 }
+
 
 .about-lasoye .collections{
     color:white;
@@ -206,15 +203,16 @@ header .navbar{
 }
 
 .lasoye-collection {
-    gap: 10px;
-    display:flex;
-    margin:auto;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    color:black;
-    font-size:30px;
+    width: 50%;
+    flex: 0 0 50%;
+    padding: 0 40px;
+    margin: 0; /* Clear out 'margin: auto' which throws off layout grids */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
 
 .collections{
     display:flex;
