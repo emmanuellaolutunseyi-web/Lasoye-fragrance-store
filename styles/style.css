@@ -383,7 +383,7 @@ header .navbar{
     display:none;
 }
 
-@media (max-width:110p0x){
+@media (max-width:1100px){
     .hero-section .section-content{
         min-height:70vh
     }
@@ -417,6 +417,12 @@ header .navbar{
         gap: 20px;
         flex-wrap: wrap;
         justify-content: center;
+    }
+    .hero-section .hero-details .title{
+    font-size: 42px;
+    }
+    .hero-section .hero-details .subtitle{
+    font-size: 24px;
     }
     .hero-section .section-content {
         flex-direction: column;
