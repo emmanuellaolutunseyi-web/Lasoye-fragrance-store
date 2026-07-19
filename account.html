@@ -58,10 +58,10 @@
         <input type="password" name="confirm_password" placeholder="Confirm password" required/>
       </div>
       <div class="policy">
-        <input type="checkbox" name="accepted_terms">
-        <h3>I accept <a href="#">terms & conditions</a></h3>
+        <input type="checkbox" name="accepted_terms" required>
+        <h3>I accept <a href="javascript:void(0)" id="open-terms">terms & conditions</a></h3>
       </div>
-      <div class="button">
+      <div class="buttonacc">
         <button>Register Now</button>
       </div>
       <div class="text">
@@ -71,5 +71,54 @@
       </div>
     </form>
   </div>
+  <!-- The background dim layer -->
+  <div id="terms-modal" class="modal-overlay">
+    <div class="modal-card">
+      <button type="button" id="close-modal" class="close-btn">&times;</button>
+      <h2>Terms & Conditions</h2>
+      <div class="modal-body-text">
+        <p>Welcome to Lasoye. By creating an account and checking the box, you agree to comply with and be bound by the following terms and conditions of use.</p>
+
+        <strong>1. Account Security</strong>
+        <p>You are responsible for maintaining the confidentiality of your username and secure password credentials. You agree to accept responsibility for all activities that occur under your user profile.</p>
+
+        <strong>2. Personal Data & Privacy</strong>
+        <p>We value your privacy. Your registration details (including name, email address, and hashed credentials) are strictly collected to process transactions, manage orders, and manage authentication. Your data will never be sold or distributed to unauthorized third parties.</p>
+
+        <strong>3. Purchase & Ordering Policies</strong>
+        <p>All orders placed through our storefront depend on stock availability. Product descriptions, bottle sizes (e.g., 50ml), and prices are subject to change without prior notice.</p>
+
+        <strong>4. Deliveries & Shipping</strong>
+        <p>Estimated delivery windows (e.g., "Arriving on August 20") are approximations provided by our fulfillment partners. Lasoye is not liable for structural carrier delays once an item leaves our warehouse.</p>
+
+        <strong>5. Returns & Cancellations</strong>
+        <p>Customers have the right to request returns or cancellations within our specified return window, provided the product remains in its original, unopened, and unused retail packaging.</p>
+
+        <p><em>If you do not agree with any part of these terms, please do not proceed with creating an account.</em></p>
+      </div>
+    </div>
+  </div>
+  <script>
+    const modal = document.getElementById('terms-modal');
+    const openLink = document.getElementById('open-terms');
+    const closeBtn = document.getElementById('close-modal');
+
+    
+    openLink.addEventListener('click', () => {
+        modal.style.display = 'flex';
+    });
+
+    
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+  </script>
 </body>
 </html>

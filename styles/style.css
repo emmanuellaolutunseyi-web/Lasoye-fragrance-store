@@ -314,18 +314,84 @@ header .navbar{
     height: 120px;
 }
 
-/* Button */
-#contact button{
-    background-color: #d95a6d;
-    color: white;
-    padding: 12px;
-    border-radius: 8px;
-    font-size: 1rem;
-}
+
 
 #contact button:hover{
     background-color: #b84456;
 }
+
+
+.modal-overlay {
+    display: none; 
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dim effect */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.modal-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    color: black;
+}
+.close-btn:hover {
+    color: #d95a6d;
+}
+
+
+.modal-body-text {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 15px;
+    color: black;
+}
+
+.modal-body-text p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: black;
+    margin-bottom: 18px; 
+}
+
+
+.modal-body-text strong {
+    font-family: "Pinyon Script", cursive;
+    display: block; 
+    font-size: 15px;
+    color: #d95a6d; 
+    margin-bottom: 6px;
+    margin-top: 12px;
+}
+
+
+.modal-body-text em {
+    display: block;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+
 
 
 .backbutton:hover{
@@ -368,10 +434,17 @@ header .navbar{
     background-color: #d95a6d;
     padding: 7px;
     border-radius: 8px;
-    margin:20px;
     font-size: 1.1rem;
     width:300px;
+    color:white;
 }
+
+.buttonacc {
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+}
+
 #hamburger{
     display:none;
 }
